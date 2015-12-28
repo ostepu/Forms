@@ -6,13 +6,13 @@
  * @date 2014
  */
 
-require_once ( dirname(__FILE__) . '/../../Assistants/vendor/Slim/Slim/Slim.php' );
-include_once ( dirname(__FILE__) . '/../../Assistants/Structures.php' );
-include_once ( dirname(__FILE__) . '/../../Assistants/Request.php' );
-include_once ( dirname(__FILE__) . '/../../Assistants/DBJson.php' );
-include_once ( dirname(__FILE__) . '/../../Assistants/DBRequest.php' );
-include_once ( dirname(__FILE__) . '/../../Assistants/CConfig.php' );
-include_once ( dirname(__FILE__) . '/../../Assistants/Logger.php' );
+require_once ( dirname(__FILE__) . '/../../../Assistants/vendor/Slim/Slim/Slim.php' );
+include_once ( dirname(__FILE__) . '/../../../Assistants/Structures.php' );
+include_once ( dirname(__FILE__) . '/../../../Assistants/Request.php' );
+include_once ( dirname(__FILE__) . '/../../../Assistants/DBJson.php' );
+include_once ( dirname(__FILE__) . '/../../../Assistants/DBRequest.php' );
+include_once ( dirname(__FILE__) . '/../../../Assistants/CConfig.php' );
+include_once ( dirname(__FILE__) . '/../../../Assistants/Logger.php' );
 
 \Slim\Slim::registerAutoloader( );
 
