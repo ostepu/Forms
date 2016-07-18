@@ -66,6 +66,10 @@
             "target": "CLocalObjectRequest"
         },
         {
+            "name": "postCourse",
+            "target": "LCourse"
+        },
+        {
             "name": "request",
             "target": "CHelp",
             "links": [
