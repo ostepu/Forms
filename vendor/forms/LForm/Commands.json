@@ -1,6 +1,30 @@
 [
-    {    "method":"post", "path":"/form" },
-    {    "method":"post", "path":"/course" },
-    {    "method":"delete", "path":"/course/:courseid" },
-    {    "method":"get", "path":"/link/exists/course/:courseid" }
+    {
+        "path": "\/form",
+        "method": "post",
+        "description": {
+            "de": "speichert bzw. ändert ein Form-Objekt"
+        }
+    },
+    {
+        "path": "\/course",
+        "method": "post",
+        "description": {
+            "de": "installiert die Komponente in die Veranstaltung"
+        }
+    },
+    {
+        "path": "\/course\/:courseid",
+        "method": "delete",
+        "description": {
+            "de": "entfernt die Komponente aus der Veranstaltung"
+        }
+    },
+    {
+        "path": "\/link\/exists\/course\/:courseid",
+        "method": "get",
+        "description": {
+            "de": "prüft, ob die Komponente in dieser Veranstaltung installiert ist"
+        }
+    }
 ]

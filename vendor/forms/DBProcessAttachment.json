@@ -1,10 +1,19 @@
 {
-  "name":"DBProcessAttachment",
-  "version":"1.0",
-  "type":"clone",
-  "base":"DBAttachment2",
-  "baseURI":"/processAttachment",
-  "connector":[
-    {"name":"postCourse", "target":"LProcessor"}
-  ]
+    "name": "DBProcessAttachment",
+    "description": {
+        "de": "Die DBProcessAttachment ermöglicht den Zugriff auf die `Attachment_processAttachment_X` Tabellen der Datenbank. Diese verwaltet Einträge für die LProcessor (Verarbeitungen)  Komponente (Dateianhänge für einen Verarbeitungsvorgang)."
+    },
+    "version": "1.0",
+    "baseURI": "\/processAttachment",
+    "base": "DBAttachment2",
+    "type": "clone",
+    "connector": [
+        {
+            "name": "postCourse",
+            "target": "LProcessor",
+            "description": {
+                "de": "wenn eine neue Veranstaltung angelegt wird, dann wollen wir auch aufgerufen werden"
+            }
+        }
+    ]
 }

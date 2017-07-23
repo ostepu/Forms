@@ -1,38 +1,69 @@
 {
     "name": "LForm",
+    "description": {
+        "de": "LForm ist die übergeordnete Komponente von DBForm und DBChoice und gehört zu den Komponenten der Eingabeformulare."
+    },
     "version": "1.0",
     "classFile": "LForm.php",
     "className": "LForm",
     "files": [
-        {"path": ".htaccess"},
-        {"path": "LForm.php"},
-        {"path": "index.php"},
-        {"path": "Commands.json"},
-        {"path": "info/"},
-        {"path": "help/"}
+        {
+            "path": ".htaccess"
+        },
+        {
+            "path": "LForm.php"
+        },
+        {
+            "path": "index.php"
+        },
+        {
+            "path": "Commands.json"
+        },
+        {
+            "path": "info\/"
+        },
+        {
+            "path": "help\/"
+        }
     ],
     "links": [
         {
             "name": "form",
             "target": "DBForm",
+            "description": {
+                "de": "zum Erstellen, Ändern und Löschen von Form-Einträgen"
+            },
             "links": [
                 {
                     "method": "POST",
-                    "path": "/form"
+                    "path": "\/form"
+                },
+                {
+                    "method": "PUT",
+                    "path": "\/form\/:formid"
                 },
                 {
                     "method": "DELETE",
-                    "path": "/form/:formid"
+                    "path": "\/form\/:formid"
                 }
             ]
         },
         {
             "name": "choice",
             "target": "DBChoice",
-            "links": [{
-                "method": "POST",
-                "path": "/choice"
-            }]
+            "description": {
+                "de": "zum Erstellen und Ändern von Choice-Einträgen"
+            },
+            "links": [
+                {
+                    "method": "POST",
+                    "path": "\/choice"
+                },
+                {
+                    "method": "PUT",
+                    "path": "\/choice\/:choiceid"
+                }
+            ]
         },
         {
             "name": "postCourse",
@@ -40,18 +71,21 @@
                 "DBForm",
                 "DBChoice"
             ],
+            "description": {
+                "de": "Wenn auch andere Komponenten beim Erstellen einer Veranstaltung aufgerufen werden wollen, dann können sie sich an diesen Ausgäng hängen."
+            },
             "links": [
                 {
                     "method": "GET",
-                    "path": "/link/exists/course/:courseid"
+                    "path": "\/link\/exists\/course\/:courseid"
                 },
                 {
                     "method": "POST",
-                    "path": "/course"
+                    "path": "\/course"
                 },
                 {
                     "method": "DELETE",
-                    "path": "/course/:courseid"
+                    "path": "\/course\/:courseid"
                 }
             ]
         }
@@ -59,19 +93,34 @@
     "connector": [
         {
             "name": "extension",
-            "target": "LExtension"
+            "target": "LExtension",
+            "description": {
+                "de": "wir wollen als Veranstaltungserweiterung installierbar sein (in der Kursverwaltung kann LForm dann ausgewählt werden)"
+            }
         },
         {
             "name": "request",
-            "target": "CLocalObjectRequest"
+            "target": "CLocalObjectRequest",
+            "description": {
+                "de": "damit LForm als lokales Objekt aufgerufen werden kann"
+            }
         },
         {
             "name": "request",
             "target": "CHelp",
+            "description": {
+                "de": "hier werden Hilfedateien beim zentralen Hilfesystem angemeldet, sodass sie über ihre globale Adresse abgerufen werden können"
+            },
             "links": [
-                {"path": "/help/:language/extension/LForm/LForm.md"},
-                {"path": "/help/:language/extension/LForm/LFormA.png"},
-                {"path": "/help/:language/extension/LForm/LFormB.png"}
+                {
+                    "path": "\/help\/:language\/extension\/LForm\/LForm.md"
+                },
+                {
+                    "path": "\/help\/:language\/extension\/LForm\/LFormA.png"
+                },
+                {
+                    "path": "\/help\/:language\/extension\/LForm\/LFormB.png"
+                }
             ]
         }
     ]

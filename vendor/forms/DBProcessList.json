@@ -1,10 +1,19 @@
 {
-  "name":"DBProcessList",
-  "version":"1.0",
-  "type":"clone",
-  "base":"DBProcess",
-  "baseURI":"/processList",
-  "connector":[
-    {"name":"postCourse", "target":"LProcessor"}
-  ]
+    "name": "DBProcessList",
+    "description": {
+        "de": "Die DBProcessList ermöglicht den Zugriff auf die `Process_processList_X` Tabellen der Datenbank. Diese verwaltet Einträge zu Komponenten, welche als verarbeitendes Modul beim Erstellen einer Übungsserie gewählt werden können."
+    },
+    "version": "1.0",
+    "baseURI": "\/processList",
+    "base": "DBProcess",
+    "type": "clone",
+    "connector": [
+        {
+            "name": "postCourse",
+            "target": "LProcessor",
+            "description": {
+                "de": "wenn eine neue Veranstaltung angelegt wird, dann wollen wir auch aufgerufen werden"
+            }
+        }
+    ]
 }

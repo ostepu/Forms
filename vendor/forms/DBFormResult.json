@@ -1,10 +1,19 @@
 {
-  "name":"DBFormResult",
-  "version":"1.0",
-  "type":"clone",
-  "base":"DBChoice",
-  "baseURI":"/formResult",
-  "connector":[
-    {"name":"postCourse", "target":"LForm"}
-  ]
+    "name": "DBFormResult",
+    "description": {
+        "de": "Die DBFormResult ermöglicht den Zugriff auf die `Choice_formResult_X` Tabellen der Datenbank. Diese enthält die unveränderten Eingaben der Studenten, wenn diese eine Formulareingabe nutzen. Das zusätzliche Speichern in dieser Tabelle ist theoretisch nicht zwingend notwendig, soll aber im Fehlerfall der Wiederherstellung der Nutzereingaben dienen."
+    },
+    "version": "1.0",
+    "baseURI": "\/formResult",
+    "base": "DBChoice",
+    "type": "clone",
+    "connector": [
+        {
+            "name": "postCourse",
+            "target": "LForm",
+            "description": {
+                "de": "Wenn eine neue Veranstaltung erstellt wird, dann wollen wir aufgerufen werden."
+            }
+        }
+    ]
 }

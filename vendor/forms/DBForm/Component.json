@@ -1,19 +1,50 @@
 {
-  "name":"DBForm",
-  "version":"1.0",
-  "classFile":"DBForm.php",
-  "className":"DBForm",
-  "files":[
-    {"path":".htaccess"},
-    {"path":"DBForm.php"},
-    {"path":"index.php"},
-    {"path":"Commands.json"},
-    {"path":"Sql/"}
-  ],
-  "links":[
-    {"name":"out", "target":"DBQuery2", "links":[{"method":"POST", "path":"/query" }] }
-  ],
-  "connector":[
-    {"name":"request", "target":"CLocalObjectRequest"}
-  ]
+    "name": "DBForm",
+    "description": {
+        "de": "Die DBForm ermöglicht den Zugriff auf die `Form_X` Tabellen der Datenbank. Diese gehört zu den Formulareingaben rund um LForm und DBChoice."
+    },
+    "version": "1.0",
+    "classFile": "DBForm.php",
+    "className": "DBForm",
+    "files": [
+        {
+            "path": ".htaccess"
+        },
+        {
+            "path": "DBForm.php"
+        },
+        {
+            "path": "index.php"
+        },
+        {
+            "path": "Commands.json"
+        },
+        {
+            "path": "Sql\/"
+        }
+    ],
+    "links": [
+        {
+            "name": "out",
+            "target": "DBQuery2",
+            "description": {
+                "de": "Dieser Ausgang wird für diverse Anfragen verwendet."
+            },
+            "links": [
+                {
+                    "method": "POST",
+                    "path": "\/query"
+                }
+            ]
+        }
+    ],
+    "connector": [
+        {
+            "name": "request",
+            "target": "CLocalObjectRequest",
+            "description": {
+                "de": "damit DBForm als lokales Objekt aufgerufen werden kann"
+            }
+        }
+    ]
 }

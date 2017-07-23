@@ -1,19 +1,50 @@
 {
-  "name":"DBChoice",
-  "version":"1.0",
-  "classFile":"DBChoice.php",
-  "className":"DBChoice",
-  "files":[
-    {"path":".htaccess"},
-    {"path":"DBChoice.php"},
-    {"path":"index.php"},
-    {"path":"Commands.json"},
-    {"path":"Sql/"}
-  ],
-  "links":[
-    {"name":"out", "target":"DBQuery2", "links":[{"method":"POST", "path":"/query" }] }
-  ],
-  "connector":[
-    {"name":"request", "target":"CLocalObjectRequest"}
-  ]
+    "name": "DBChoice",
+    "description": {
+        "de": "Die DBChoice ermöglicht den Zugriff auf die `Choice_X` Tabellen der Datenbank. Diese gehört zu den Formulareingaben rund um LForm und DBForm."
+    },
+    "version": "1.0",
+    "classFile": "DBChoice.php",
+    "className": "DBChoice",
+    "files": [
+        {
+            "path": ".htaccess"
+        },
+        {
+            "path": "DBChoice.php"
+        },
+        {
+            "path": "index.php"
+        },
+        {
+            "path": "Commands.json"
+        },
+        {
+            "path": "Sql\/"
+        }
+    ],
+    "links": [
+        {
+            "name": "out",
+            "target": "DBQuery2",
+            "description": {
+                "de": "Dieser Ausgang wird für diverse Anfragen verwendet."
+            },
+            "links": [
+                {
+                    "method": "POST",
+                    "path": "\/query"
+                }
+            ]
+        }
+    ],
+    "connector": [
+        {
+            "name": "request",
+            "target": "CLocalObjectRequest",
+            "description": {
+                "de": "damit DBChoice als lokales Objekt aufgerufen werden kann"
+            }
+        }
+    ]
 }

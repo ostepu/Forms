@@ -1,12 +1,72 @@
 [
-    {    "method":"post", "path":"/course" },
-    {    "method":"delete", "path":"/course(/course)/:courseid" },
-    {    "method":"put", "path":"/form(/form)/:formid" },
-    {    "method":"delete", "path":"/form(/form)/:formid" },
-    {    "method":"post", "path":"/form" },
-    {    "method":"get", "path":"/form(/form)/:formid" },
-    {    "method":"get", "path":"/form/course/:courseid" },
-    {    "method":"get", "path":"/link/exists/course/:courseid" },
-    {    "method":"get", "path":"/form/exercisesheet/:esid" },
-    {    "method":"get", "path":"/form/exercise/:eid" }
+    {
+        "path": "\/course",
+        "method": "post",
+        "description": {
+            "de": "installiert DBForm in diese Veranstaltung"
+        }
+    },
+    {
+        "path": "\/course(\/course)\/:courseid",
+        "method": "delete",
+        "description": {
+            "de": "entfernt die Komponente aus der Veranstaltung"
+        }
+    },
+    {
+        "path": "\/form(\/form)\/:formid",
+        "method": "put",
+        "description": {
+            "de": "ändert ein Formular"
+        }
+    },
+    {
+        "path": "\/form(\/form)\/:formid",
+        "method": "delete",
+        "description": {
+            "de": "entfernt ein Formular"
+        }
+    },
+    {
+        "path": "\/form",
+        "method": "post",
+        "description": {
+            "de": "speichert ein neues Formular"
+        }
+    },
+    {
+        "path": "\/form(\/form)\/:formid",
+        "method": "get",
+        "description": {
+            "de": "ermittelt ein einzelnes Formular"
+        }
+    },
+    {
+        "path": "\/form\/course\/:courseid",
+        "method": "get",
+        "description": {
+            "de": "ermittelt alle Formulare einer Veranstaltung"
+        }
+    },
+    {
+        "path": "\/link\/exists\/course\/:courseid",
+        "method": "get",
+        "description": {
+            "de": "prüft, ob die Komponente in diese Veranstaltung installiert wurde"
+        }
+    },
+    {
+        "path": "\/form\/exercisesheet\/:esid",
+        "method": "get",
+        "description": {
+            "de": "ermittelt alle Formulare einer Übungsserie"
+        }
+    },
+    {
+        "path": "\/form\/exercise\/:eid",
+        "method": "get",
+        "description": {
+            "de": "ermittelt alle Formulare einer Aufgabe"
+        }
+    }
 ]

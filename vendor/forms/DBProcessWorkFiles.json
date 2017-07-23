@@ -1,10 +1,19 @@
 {
-  "name":"DBProcessWorkFiles",
-  "version":"1.0",
-  "type":"clone",
-  "base":"DBAttachment2",
-  "baseURI":"/processWorkFiles",
-  "connector":[
-    {"name":"postCourse", "target":"LProcessor"}
-  ]
+    "name": "DBProcessWorkFiles",
+    "description": {
+        "de": "Die DBProcessWorkFiles ermöglicht den Zugriff auf die `Attachment_processWorkFiles_X` Tabellen der Datenbank. Diese verwaltet Einträge für die LProcessor (Verarbeitungen) Komponente (Dateieinträge welche der Bearbeitung einer Verarbeitung dienen)."
+    },
+    "version": "1.0",
+    "baseURI": "\/processWorkFiles",
+    "base": "DBAttachment2",
+    "type": "clone",
+    "connector": [
+        {
+            "name": "postCourse",
+            "target": "LProcessor",
+            "description": {
+                "de": "wenn eine neue Veranstaltung angelegt wird, dann wollen wir auch aufgerufen werden"
+            }
+        }
+    ]
 }
